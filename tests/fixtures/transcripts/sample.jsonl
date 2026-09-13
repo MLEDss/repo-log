@@ -1,0 +1,4 @@
+{"role":"user","message":{"content":[{"type":"text","text":"文件光源和径向表有什么区别？"}]}}
+{"role":"assistant","message":{"content":[{"type":"text","text":"径向表是远场角分布；文件光源带射线位置。有回射时要保留几何。"}]}}
+{"role":"user","message":{"content":[{"type":"text","text":"那和 os-led-source-model-v0 怎么链？"}]}}
+{"role":"assistant","message":{"content":[{"type":"text","text":"概念页只链公式版本号，不在笔记里改数字。"}]}}

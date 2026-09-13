@@ -1,0 +1,26 @@
+---
+description: 本仓库是唯一运行与落盘边界；禁止写到兄弟项目或 Knowledge
+alwaysApply: true
+---
+
+# 运行时隔离
+
+仓库根目录 `D:\Repo Log` 是唯一运行、安装、建文件边界。
+
+- 只在本仓库内创建/修改文件。禁止写到 Optics Simulation、DisplayCaliber、LED Tools、`D:\Knowledge`、Zotero、Logseq 配置目录。
+- 兄弟项目仅在用户要求对齐 **Agent 规范** 时只读参考；禁止用它们的 `.venv` 或源码路径当本仓运行时。
+- 本仓不分析、不转换兄弟仓手册；那些工作属于光学仓，不在这里做。
+- 有第三方依赖时 Python 只用 `.\.venv\Scripts\python.exe`。禁止 `pip install --user`、全局 site-packages。
+- 测试输出只落在 `tests/`。禁止 `--allow-external`，禁止设置 `REPO_LOG_ALLOW_EXTERNAL`。
+- 引擎默认图是本仓 `out/notes`（`python -m repo_log init`）。用户自己的 `D:\Knowledge` / RAG inbox 仍由用户建；Agent 不往仓外写。
+
+```powershell
+# ✅
+$env:PYTHONPATH = Join-Path (Get-Location) 'src'
+python -m unittest discover -s tests -q
+
+# ❌
+python -m pip install --user ...
+D:\Optics Simulation\.venv\Scripts\python.exe ...
+python -m repo_log capture --allow-external --out-dir D:\Knowledge\...
+```

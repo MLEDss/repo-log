@@ -1,0 +1,16 @@
+.venv/
+node_modules/
+.pytest-tmp/
+tests/.tmp/
+__pycache__/
+*.py[cod]
+*.egg-info/
+.env
+out/
+export/
+release/
+*.pdf
+*.mp4
+*.jsonl
+!tests/fixtures/**/*.jsonl
+export/

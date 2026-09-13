@@ -1,0 +1,19 @@
+{
+  "title": "径向表 vs 文件光源",
+  "mapping": {
+    "a": {
+      "message": {
+        "author": { "role": "user" },
+        "content": { "content_type": "text", "parts": ["径向表和文件光源差在哪？"] },
+        "create_time": 1
+      }
+    },
+    "b": {
+      "message": {
+        "author": { "role": "assistant" },
+        "content": { "content_type": "text", "parts": ["径向表是远场角分布；文件光源带位置。有回射要留几何。"] },
+        "create_time": 2
+      }
+    }
+  }
+}

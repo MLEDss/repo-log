@@ -1,0 +1,31 @@
+{
+  "name": "logseq-plugin-repo-log",
+  "version": "0.1.0",
+  "description": "Repo Log control panel for Logseq OG: settings and buttons call a local Python engine. No second write path.",
+  "author": "Repo Log",
+  "license": "MIT",
+  "main": "dist/index.html",
+  "logseq": {
+    "id": "logseq-plugin-repo-log",
+    "title": "Repo Log",
+    "icon": "./icon.png",
+    "unsupportedGraphType": "db"
+  },
+  "scripts": {
+    "dev": "vite",
+    "build": "vite build"
+  },
+  "dependencies": {
+    "@logseq/libs": "^0.0.17"
+  },
+  "devDependencies": {
+    "vite": "^5.4.19"
+  },
+  "browserslist": [
+    "chrome 80"
+  ],
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/MLEDss/repo-log.git"
+  }
+}

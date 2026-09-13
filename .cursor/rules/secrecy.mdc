@@ -1,0 +1,18 @@
+---
+description: 禁止把兄弟仓原文、聊天全量拷进本仓
+alwaysApply: true
+---
+
+# 泄密与材料边界
+
+本仓做捕获工具，不做手册分析。
+
+## 禁止
+
+- 把兄弟仓 `参考文件/`、客户数据、BOE 内训原片拷进本仓或 git。
+- 提交 Cursor/ChatGPT 全文 jsonl、`.env`。
+
+## 允许
+
+- 合成夹具：`tests/fixtures/` 里的短 jsonl / 模板 Markdown。
+- 工具输出的对话/概念页骨架（要点，不是原文手册）。

@@ -1,0 +1,45 @@
+<!doctype html>
+<html lang="zh-CN">
+  <head>
+    <meta charset="utf-8" />
+    <title>Repo Log</title>
+  </head>
+  <body>
+    <div id="app">
+      <h1>Repo Log</h1>
+      <div class="sub">Buttons and settings live here. Pages are written by the local engine. Browse the graph in Logseq OG.</div>
+      <div id="graph">Graph: …</div>
+      <div class="row">
+        <button id="btn-init">Initialize graph</button>
+        <button id="btn-catalog">Update catalog</button>
+        <button id="btn-use" class="secondary">Open 使用</button>
+        <button id="btn-close" class="secondary">Close</button>
+      </div>
+      <label>Project root</label>
+      <input id="root" placeholder="D:\your-repo" />
+      <label>IDE</label>
+      <select id="ide">
+        <option value="cursor">cursor</option>
+        <option value="chatgpt">chatgpt</option>
+      </select>
+      <div class="row">
+        <button id="btn-add">Add project</button>
+        <button id="btn-remove" class="danger">Remove selected</button>
+      </div>
+      <ul id="projects"></ul>
+      <label>Transcript path</label>
+      <input id="cap-path" placeholder="path\to.jsonl or conversations.json" />
+      <label>Title / concept (optional)</label>
+      <div class="row">
+        <input id="cap-title" placeholder="title" />
+        <input id="cap-concept" placeholder="concept" />
+      </div>
+      <div class="row">
+        <button id="btn-cursor">Capture Cursor jsonl</button>
+        <button id="btn-gpt">Capture ChatGPT export</button>
+      </div>
+      <div id="log">Engine not connected. In the Repo Log repo run: python -m repo_log serve</div>
+    </div>
+    <script type="module" src="/src/main.js"></script>
+  </body>
+</html>

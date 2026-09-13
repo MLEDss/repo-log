@@ -1,0 +1,14 @@
+{
+  "projects": [
+    {
+      "id": "cursor-demo",
+      "ide": "cursor",
+      "root": "CURSOR_ROOT"
+    },
+    {
+      "id": "chatgpt-demo",
+      "ide": "chatgpt",
+      "root": "CHATGPT_ROOT"
+    }
+  ]
+}

@@ -1,0 +1,8 @@
+{
+  "notes_out": "out/notes",
+  "include": ["AGENTS.md", "docs/*.md"],
+  "exclude": ["**/参考文件/**", "**/*.pdf", "**/*.mp4", "**/.venv/**"],
+  "max_bytes": 262144,
+  "mirror": "full",
+  "projects": []
+}

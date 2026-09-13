@@ -1,0 +1,16 @@
+---
+description: 旁路捕获层；不 fork Logseq；默认图在 out/notes；仓外 Knowledge 由用户持有
+alwaysApply: true
+---
+
+# 架构约定
+
+- 本仓产品是 **OG 文件图上的引擎**（`src/repo_log`）。Logseq 插件、控制台、Cursor/ChatGPT skill 都是入口，禁止做成多套平行写页逻辑，禁止 fork OG。
+- 项目登记是设置（`out/settings.json` / 插件「添加工程」），不是一次性确认清单。
+- `src/repo_log/` 引擎纯逻辑。GUI/插件只调引擎（插件经 localhost HTTP）。落盘必须经 `assert_write_path`。
+- 插件源码在本仓 `plugin/`。禁止把 npm、Clojure、Logseq 本体加进引擎依赖。
+- `templates/` 是页骨架；`tests/fixtures/` 是合成样例，不是真实笔记。
+- 引擎默认图是本仓 `out/notes`（gitignore / cursorignore）。用户自己的 Knowledge 图与 `rag-inbox` 仍在仓外，Agent 不创建、不往那里写。
+- 工程文档用 `catalog` **单向镜像**到笔记输出目录。禁止把工程仓当 Logseq 图根，禁止把 `docs/` 链进笔记图。
+- 用户可见文案中文；代码标识符英文。
+- 大范围改动（默认图路径、页 ID 契约、RAG 库名）先改 `docs/计划.md` 再实现。
