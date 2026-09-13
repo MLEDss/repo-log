@@ -16,7 +16,7 @@ Marketplace install gives you this panel only. You still need the Python engine 
 4. Open the OG graph at `out/notes` (run `python -m repo_log init` once).
 5. Toolbar **RL**.
 
-Until the marketplace PR is merged, use unpacked install:
+Until [marketplace PR #900](https://github.com/logseq/marketplace/pull/900) is merged, use unpacked install:
 
 1. Enable Developer mode in Logseq settings.
 2. `cd plugin && npm install && npm run build`
